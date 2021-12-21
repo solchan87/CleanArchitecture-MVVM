@@ -18,6 +18,20 @@
 		E29F2B732770565B00F17A13 /* CleanMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2B722770565B00F17A13 /* CleanMVVMUITestsLaunchTests.swift */; };
 		E29F2B8B2770585800F17A13 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = E29F2B8A2770585800F17A13 /* Moya */; };
 		E29F2B8D2770585800F17A13 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = E29F2B8C2770585800F17A13 /* RxMoya */; };
+		E29F2B9B277190CC00F17A13 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2B9A277190CC00F17A13 /* Networking.swift */; };
+		E29F2B9E2771912000F17A13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2B9D2771912000F17A13 /* Extensions.swift */; };
+		E29F2BA12771992F00F17A13 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = E29F2BA02771992F00F17A13 /* CocoaLumberjack */; };
+		E29F2BA32771992F00F17A13 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E29F2BA22771992F00F17A13 /* CocoaLumberjackSwift */; };
+		E29F2BA62771995400F17A13 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2BA52771995400F17A13 /* Logger.swift */; };
+		E29F2BA9277199AA00F17A13 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2BA8277199AA00F17A13 /* ViewModelType.swift */; };
+		E29F2BAC277199DF00F17A13 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2BAB277199DF00F17A13 /* CoordinatorType.swift */; };
+		E29F2BAF27719A0200F17A13 /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2BAE27719A0200F17A13 /* TransitionType.swift */; };
+		E29F2BB127719D1C00F17A13 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2BB027719D1C00F17A13 /* Scene.swift */; };
+		E29F2BB327719D6C00F17A13 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2BB227719D6C00F17A13 /* AppCoordinator.swift */; };
+		E29F2BB527719D8800F17A13 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2BB427719D8800F17A13 /* BindableType.swift */; };
+		E29F2BB727719DAB00F17A13 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2BB627719DAB00F17A13 /* ServiceProvider.swift */; };
+		E29F2BB927719DC000F17A13 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2BB827719DC000F17A13 /* BaseService.swift */; };
+		E29F2BBC27719E1300F17A13 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = E29F2BBB27719E1300F17A13 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +65,17 @@
 		E29F2B6C2770565B00F17A13 /* CleanMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29F2B702770565B00F17A13 /* CleanMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanMVVMUITests.swift; sourceTree = "<group>"; };
 		E29F2B722770565B00F17A13 /* CleanMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E29F2B9A277190CC00F17A13 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		E29F2B9D2771912000F17A13 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E29F2BA52771995400F17A13 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		E29F2BA8277199AA00F17A13 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		E29F2BAB277199DF00F17A13 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		E29F2BAE27719A0200F17A13 /* TransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
+		E29F2BB027719D1C00F17A13 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		E29F2BB227719D6C00F17A13 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		E29F2BB427719D8800F17A13 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		E29F2BB627719DAB00F17A13 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		E29F2BB827719DC000F17A13 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29F2BBC27719E1300F17A13 /* Then in Frameworks */,
+				E29F2BA12771992F00F17A13 /* CocoaLumberjack in Frameworks */,
 				E29F2B8D2770585800F17A13 /* RxMoya in Frameworks */,
+				E29F2BA32771992F00F17A13 /* CocoaLumberjackSwift in Frameworks */,
 				E29F2B8B2770585800F17A13 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,10 +158,11 @@
 		E29F2B8E27706ADC00F17A13 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E29F2B9427706B5D00F17A13 /* UI */,
-				E29F2B9327706B5300F17A13 /* Domain */,
-				E29F2B9227706B4B00F17A13 /* Data */,
 				E29F2B9127706B4000F17A13 /* Application */,
+				E29F2B9227706B4B00F17A13 /* Data */,
+				E29F2B9327706B5300F17A13 /* Domain */,
+				E29F2B9427706B5D00F17A13 /* UI */,
+				E29F2B952771835B00F17A13 /* Coordinator */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -160,6 +189,8 @@
 		E29F2B9127706B4000F17A13 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				E29F2BA42771994900F17A13 /* Log */,
+				E29F2B9C2771911000F17A13 /* Extension */,
 				E29F2B4E2770565900F17A13 /* SceneDelegate.swift */,
 				E29F2B4C2770565900F17A13 /* AppDelegate.swift */,
 			);
@@ -169,6 +200,7 @@
 		E29F2B9227706B4B00F17A13 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E29F2B962771845800F17A13 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -176,6 +208,8 @@
 		E29F2B9327706B5300F17A13 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E29F2B972771846300F17A13 /* Model */,
+				E29F2B982771846C00F17A13 /* Service */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -183,8 +217,77 @@
 		E29F2B9427706B5D00F17A13 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E29F2B992771848000F17A13 /* Common */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		E29F2B952771835B00F17A13 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E29F2BAA277199CA00F17A13 /* Common */,
+				E29F2BB027719D1C00F17A13 /* Scene.swift */,
+				E29F2BB227719D6C00F17A13 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E29F2B962771845800F17A13 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E29F2B9A277190CC00F17A13 /* Networking.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E29F2B972771846300F17A13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E29F2B982771846C00F17A13 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E29F2BB627719DAB00F17A13 /* ServiceProvider.swift */,
+				E29F2BB827719DC000F17A13 /* BaseService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E29F2B992771848000F17A13 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E29F2BA8277199AA00F17A13 /* ViewModelType.swift */,
+				E29F2BB427719D8800F17A13 /* BindableType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E29F2B9C2771911000F17A13 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E29F2B9D2771912000F17A13 /* Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E29F2BA42771994900F17A13 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				E29F2BA52771995400F17A13 /* Logger.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		E29F2BAA277199CA00F17A13 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E29F2BAB277199DF00F17A13 /* CoordinatorType.swift */,
+				E29F2BAE27719A0200F17A13 /* TransitionType.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +309,9 @@
 			packageProductDependencies = (
 				E29F2B8A2770585800F17A13 /* Moya */,
 				E29F2B8C2770585800F17A13 /* RxMoya */,
+				E29F2BA02771992F00F17A13 /* CocoaLumberjack */,
+				E29F2BA22771992F00F17A13 /* CocoaLumberjackSwift */,
+				E29F2BBB27719E1300F17A13 /* Then */,
 			);
 			productName = CleanMVVM;
 			productReference = E29F2B492770565900F17A13 /* CleanMVVM.app */;
@@ -284,6 +390,8 @@
 				E29F2B86277056DD00F17A13 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				E29F2B87277056EC00F17A13 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				E29F2B892770585800F17A13 /* XCRemoteSwiftPackageReference "Moya" */,
+				E29F2B9F2771992F00F17A13 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				E29F2BBA27719E1300F17A13 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = E29F2B4A2770565900F17A13 /* Products */;
 			projectDirPath = "";
@@ -327,10 +435,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29F2BB327719D6C00F17A13 /* AppCoordinator.swift in Sources */,
 				E29F2B512770565900F17A13 /* ViewController.swift in Sources */,
+				E29F2BB727719DAB00F17A13 /* ServiceProvider.swift in Sources */,
+				E29F2B9E2771912000F17A13 /* Extensions.swift in Sources */,
+				E29F2BAF27719A0200F17A13 /* TransitionType.swift in Sources */,
+				E29F2B9B277190CC00F17A13 /* Networking.swift in Sources */,
+				E29F2BB527719D8800F17A13 /* BindableType.swift in Sources */,
 				E29F2B4D2770565900F17A13 /* AppDelegate.swift in Sources */,
+				E29F2BB927719DC000F17A13 /* BaseService.swift in Sources */,
+				E29F2BA9277199AA00F17A13 /* ViewModelType.swift in Sources */,
+				E29F2BAC277199DF00F17A13 /* CoordinatorType.swift in Sources */,
+				E29F2BA62771995400F17A13 /* Logger.swift in Sources */,
 				E29F2B4F2770565900F17A13 /* SceneDelegate.swift in Sources */,
 				E29F2B572770565900F17A13 /* CleanMVVM.xcdatamodeld in Sources */,
+				E29F2BB127719D1C00F17A13 /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +819,22 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		E29F2B9F2771992F00F17A13 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		E29F2BBA27719E1300F17A13 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -712,6 +847,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E29F2B892770585800F17A13 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		E29F2BA02771992F00F17A13 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E29F2B9F2771992F00F17A13 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		E29F2BA22771992F00F17A13 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E29F2B9F2771992F00F17A13 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		E29F2BBB27719E1300F17A13 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E29F2BBA27719E1300F17A13 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 
