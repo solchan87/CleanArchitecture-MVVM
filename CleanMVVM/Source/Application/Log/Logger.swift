@@ -6,6 +6,7 @@
 //
 
 import CocoaLumberjack
+import CocoaLumberjackSwift
 
 extension DDLogFlag {
   public var level: String {
