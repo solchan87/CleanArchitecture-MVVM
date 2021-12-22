@@ -39,6 +39,12 @@
 		E2E3D6EF27720E8D0032AEB3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E2E3D6EE27720E8D0032AEB3 /* RxRelay */; };
 		E2E3D6F127720E8D0032AEB3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2E3D6F027720E8D0032AEB3 /* RxSwift */; };
 		E2E3D6F327720E8D0032AEB3 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = E2E3D6F227720E8D0032AEB3 /* RxTest */; };
+		E2E3D6F62773629F0032AEB3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D6F52773629F0032AEB3 /* BaseViewController.swift */; };
+		E2E3D6F8277362B00032AEB3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D6F7277362B00032AEB3 /* BaseView.swift */; };
+		E2E3D6FA277362CA0032AEB3 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D6F9277362CA0032AEB3 /* BaseCollectionViewCell.swift */; };
+		E2E3D6FC277363040032AEB3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D6FB277363040032AEB3 /* BaseTableViewCell.swift */; };
+		E2E3D6FE2773634E0032AEB3 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D6FD2773634E0032AEB3 /* Reusable.swift */; };
+		E2E3D7012773644F0032AEB3 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D7002773644F0032AEB3 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +90,12 @@
 		E29F2BB627719DAB00F17A13 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		E29F2BB827719DC000F17A13 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		E2E3D6E727720B040032AEB3 /* Rx+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+ViewController.swift"; sourceTree = "<group>"; };
+		E2E3D6F52773629F0032AEB3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E2E3D6F7277362B00032AEB3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		E2E3D6F9277362CA0032AEB3 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		E2E3D6FB277363040032AEB3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		E2E3D6FD2773634E0032AEB3 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		E2E3D7002773644F0032AEB3 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,8 +285,10 @@
 		E29F2B992771848000F17A13 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E2E3D6F42773628F0032AEB3 /* Base */,
 				E29F2BA8277199AA00F17A13 /* ViewModelType.swift */,
 				E29F2BB427719D8800F17A13 /* BindableType.swift */,
+				E2E3D6FD2773634E0032AEB3 /* Reusable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -282,6 +296,7 @@
 		E29F2B9C2771911000F17A13 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E2E3D6FF2773640E0032AEB3 /* Swift */,
 				E2E3D6E627720AF10032AEB3 /* Rx */,
 				E29F2B9D2771912000F17A13 /* Extensions.swift */,
 			);
@@ -311,6 +326,25 @@
 				E2E3D6E727720B040032AEB3 /* Rx+ViewController.swift */,
 			);
 			path = Rx;
+			sourceTree = "<group>";
+		};
+		E2E3D6F42773628F0032AEB3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3D6F52773629F0032AEB3 /* BaseViewController.swift */,
+				E2E3D6F7277362B00032AEB3 /* BaseView.swift */,
+				E2E3D6F9277362CA0032AEB3 /* BaseCollectionViewCell.swift */,
+				E2E3D6FB277363040032AEB3 /* BaseTableViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E2E3D6FF2773640E0032AEB3 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3D7002773644F0032AEB3 /* UIViewControllerExtension.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,8 +505,12 @@
 				E29F2BB727719DAB00F17A13 /* ServiceProvider.swift in Sources */,
 				E29F2B9E2771912000F17A13 /* Extensions.swift in Sources */,
 				E29F2BAF27719A0200F17A13 /* TransitionType.swift in Sources */,
+				E2E3D6FE2773634E0032AEB3 /* Reusable.swift in Sources */,
+				E2E3D6FA277362CA0032AEB3 /* BaseCollectionViewCell.swift in Sources */,
 				E29F2B9B277190CC00F17A13 /* Networking.swift in Sources */,
 				E2E3D6E827720B040032AEB3 /* Rx+ViewController.swift in Sources */,
+				E2E3D6FC277363040032AEB3 /* BaseTableViewCell.swift in Sources */,
+				E2E3D6F62773629F0032AEB3 /* BaseViewController.swift in Sources */,
 				E29F2BB527719D8800F17A13 /* BindableType.swift in Sources */,
 				E29F2B4D2770565900F17A13 /* AppDelegate.swift in Sources */,
 				E29F2BB927719DC000F17A13 /* BaseService.swift in Sources */,
@@ -480,7 +518,9 @@
 				E29F2BAC277199DF00F17A13 /* CoordinatorType.swift in Sources */,
 				E29F2BA62771995400F17A13 /* Logger.swift in Sources */,
 				E29F2B4F2770565900F17A13 /* SceneDelegate.swift in Sources */,
+				E2E3D6F8277362B00032AEB3 /* BaseView.swift in Sources */,
 				E29F2B572770565900F17A13 /* CleanMVVM.xcdatamodeld in Sources */,
+				E2E3D7012773644F0032AEB3 /* UIViewControllerExtension.swift in Sources */,
 				E29F2BB127719D1C00F17A13 /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

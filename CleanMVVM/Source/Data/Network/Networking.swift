@@ -16,13 +16,6 @@ protocol NetworkingProtocol {
                function: StaticString,
                line: UInt)
   -> Single<Response>
-  
-  func requestWithProgress(
-    _ target: MultiTarget,
-    file: StaticString,
-    function: StaticString,
-    line: UInt
-  ) -> Observable<ProgressResponse>
 }
 
 extension NetworkingProtocol {
@@ -35,20 +28,6 @@ extension NetworkingProtocol {
                         file: file,
                         function: function,
                         line: line)
-  }
-  
-  func requestWithProgress(
-    _ target: MultiTarget,
-    file: StaticString = #file,
-    function: StaticString = #function,
-    line: UInt = #line
-  ) -> Observable<ProgressResponse> {
-    return self.requestWithProgress(
-      target,
-      file: file,
-      function: function,
-      line: line
-    )
   }
 }
 
@@ -97,15 +76,5 @@ final class Networking: MoyaProvider<MultiTarget>,
           log.info(message)
         }
       )
-  }
-  
-  func requestWithProgress(
-    _ target: MultiTarget,
-    file: StaticString,
-    function: StaticString,
-    line: UInt
-  ) -> Observable<ProgressResponse> {
-    let requestString = "\(target.method.rawValue) \(target.path)"
-    return self.rx.requestWithProgress(target)
   }
 }
