@@ -47,6 +47,8 @@
 		E2E3D7012773644F0032AEB3 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D7002773644F0032AEB3 /* UIViewControllerExtension.swift */; };
 		E2E3D704277608CC0032AEB3 /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D703277608CC0032AEB3 /* PokemonAPI.swift */; };
 		E2E3D70627760E860032AEB3 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D70527760E860032AEB3 /* Pokemon.swift */; };
+		E2E3D709277767C30032AEB3 /* EncyclopediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D708277767C30032AEB3 /* EncyclopediaViewModel.swift */; };
+		E2E3D70B277767F70032AEB3 /* EncyclopediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3D70A277767F70032AEB3 /* EncyclopediaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		E2E3D7002773644F0032AEB3 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E2E3D703277608CC0032AEB3 /* PokemonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
 		E2E3D70527760E860032AEB3 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		E2E3D708277767C30032AEB3 /* EncyclopediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaViewModel.swift; sourceTree = "<group>"; };
+		E2E3D70A277767F70032AEB3 /* EncyclopediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				E29F2B992771848000F17A13 /* Common */,
+				E2E3D707277767990032AEB3 /* Encyclopedia */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -359,6 +364,15 @@
 				E2E3D703277608CC0032AEB3 /* PokemonAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		E2E3D707277767990032AEB3 /* Encyclopedia */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3D708277767C30032AEB3 /* EncyclopediaViewModel.swift */,
+				E2E3D70A277767F70032AEB3 /* EncyclopediaViewController.swift */,
+			);
+			path = Encyclopedia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,7 +548,9 @@
 				E2E3D70627760E860032AEB3 /* Pokemon.swift in Sources */,
 				E29F2BA62771995400F17A13 /* Logger.swift in Sources */,
 				E29F2B4F2770565900F17A13 /* SceneDelegate.swift in Sources */,
+				E2E3D70B277767F70032AEB3 /* EncyclopediaViewController.swift in Sources */,
 				E2E3D6F8277362B00032AEB3 /* BaseView.swift in Sources */,
+				E2E3D709277767C30032AEB3 /* EncyclopediaViewModel.swift in Sources */,
 				E29F2B572770565900F17A13 /* CleanMVVM.xcdatamodeld in Sources */,
 				E2E3D7012773644F0032AEB3 /* UIViewControllerExtension.swift in Sources */,
 				E29F2BB127719D1C00F17A13 /* Scene.swift in Sources */,
