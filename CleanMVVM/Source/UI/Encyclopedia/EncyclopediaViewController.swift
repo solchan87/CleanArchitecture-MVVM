@@ -12,13 +12,26 @@ import RxCocoa
 
 final class EncyclopediaViewController: BaseViewController, BindableType {
   
-  let viewModel: ViewModelType
-  
   // MARK: UI
   
-  
   // MARK: Properties
-  
+  var viewModel: EncyclopediaViewModel
   
   // MARK: Initializing
+  init(viewModel: EncyclopediaViewModel) {
+    self.viewModel = viewModel
+    super.init()
+  }
+  
+  required convenience init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  override func setupView() {
+    
+  }
+  
+  func bind() {
+    
+  }
 }

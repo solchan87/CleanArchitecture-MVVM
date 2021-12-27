@@ -28,7 +28,6 @@ class BaseViewController:
   private(set) var didSetupConstraints: Bool = false
   
   // MARK: - Initialization & Deinitialization
-  
   init() {
     super.init(nibName: nil, bundle: nil)
   }
@@ -38,38 +37,20 @@ class BaseViewController:
   }
   
   // MARK: - Deinit
-  
   deinit {
     log.info("👹🗑 deinit -> \(self.className)")
   }
   
   // MARK: - View Lifecycle
+  override func loadView() {
+    self.view = .init()
+    self.setupView()
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.view.setNeedsUpdateConstraints()
-  }
-  
-  // MARK: - Inheritance
-  
-  // MARK: - Layout Constraints
-  
-  override func updateViewConstraints() {
-    setupConstraintsIfNeeded()
-    super.updateViewConstraints()
   }
   
   // MARK: - Internal methods
-  
-  func setupConstraints() {
-    // Override here
-  }
-  
-  // MARK: - Private methods
-  
-  private func setupConstraintsIfNeeded() {
-    guard !didSetupConstraints else { return }
-    setupConstraints()
-    didSetupConstraints = true
-  }
+  func setupView() {}
 }

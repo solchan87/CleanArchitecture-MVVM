@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Welcome: Decodable {
-  let results: [Pokemon]
+struct PokemonList: Decodable {
+  let results: [ListedPokemon]
   let count: Int
 }
 
 // MARK: - Result
-struct Pokemon: Decodable {
+struct ListedPokemon: Decodable {
   let name: String
   let url: String
 }

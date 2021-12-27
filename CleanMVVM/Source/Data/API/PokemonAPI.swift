@@ -9,11 +9,11 @@ import Foundation
 
 import Moya
 
-enum WtableV2API {
+enum PokemonAPI {
   case pokemons(offset: Int, limit: Int)
 }
 
-extension WtableV2API: TargetType {
+extension PokemonAPI: TargetType {
   
   var baseURL: URL {
     URL(string: "https://pokeapi.co/api/v2")!
@@ -37,9 +37,12 @@ extension WtableV2API: TargetType {
   
   var task: Task {
     switch self {
-    default:
+    case let .pokemons(offset, limit):
       return .requestParameters(
-        parameters: [:],
+        parameters: [
+          "offset": offset,
+          "limit": limit
+        ],
         encoding: URLEncoding.default
       )
     }
