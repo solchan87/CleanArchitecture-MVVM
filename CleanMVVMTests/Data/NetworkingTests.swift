@@ -1,36 +1,30 @@
 //
-//  CleanMVVMTests.swift
-//  CleanMVVMTests
+//  NetworkingTests.swift
+//  NetworkingTests
 //
 //  Created by Tom on 2021/12/20.
 //
 
 import XCTest
+import RxBlocking
+
 @testable import CleanMVVM
 
-class CleanMVVMTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class NetworkingTests: XCTestCase {
+  func testMockTest() {
+    let networking: MockNetworking = .init()
+    
+    do {
+      let pokemons = try networking.request(
+        .target(PokemonAPI.pokemons(offset: 0, limit: 20))
+      )
+      .toBlocking()
+      .first()
+      let string = String(decoding: pokemons?.data ?? Data(), as: UTF8.self)
+      print("🧚🏻", string)
+      XCTAssertEqual(pokemons?.statusCode, 200)
+    } catch {
+      XCTFail()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+  }
 }

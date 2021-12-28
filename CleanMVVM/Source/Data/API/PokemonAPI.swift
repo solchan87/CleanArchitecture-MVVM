@@ -22,7 +22,7 @@ extension PokemonAPI: TargetType {
   var path: String {
     switch self {
     case .pokemons:
-      return "/pokemons"
+      return "/pokemon"
     }
   }
   

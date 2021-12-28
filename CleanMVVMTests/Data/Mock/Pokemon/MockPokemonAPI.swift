@@ -17,9 +17,8 @@ extension PokemonAPI {
         let url = Bundle.main.url(forResource: "PokemonListJSON", withExtension: "json"),
         let data = try? Data(contentsOf: url)
       else {
-        return Data()
+        return .init()
       }
-      
       return data
     }
   }
