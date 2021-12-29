@@ -1,17 +1,16 @@
 //
-//  BaseViewController.swift
+//  BaseNavigationViewController.swift
 //  CleanMVVM
 //
-//  Created by Tom on 2021/12/22.
+//  Created by Tom on 2021/12/29.
 //
 
 import UIKit
 
-import RxCocoa
 import RxSwift
 
-class BaseViewController:
-  UIViewController
+class BaseNavigationController:
+  UINavigationController
 {
   // MARK: - Properties
   lazy private(set) var className: String = {

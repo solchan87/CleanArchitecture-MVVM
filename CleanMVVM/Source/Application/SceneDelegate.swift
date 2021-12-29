@@ -18,6 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
     self.window = UIWindow(windowScene: windowScene)
+    self.coordinator = .init(window: self.window!)
+    
+    self.coordinator?.startRootViewController(
+      .encyclopedia(
+        viewModel: .init(
+          dependency: .init(),
+          provider: self.provider,
+          coordinator: self.coordinator!)
+      )
+    )
   }
 }
 
