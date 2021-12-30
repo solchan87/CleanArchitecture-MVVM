@@ -44,12 +44,16 @@ class BaseViewController:
   override func loadView() {
     self.view = .init()
     self.setupView()
+    self.setupConstraints()
   }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  func setupView() {
+    // Override here
+  }
+  
+  func setupConstraints() {
+    // Override here
   }
   
   // MARK: - Internal methods
-  func setupView() {}
 }

@@ -10,19 +10,19 @@ import UIKit
 import RxSwift
 
 class BaseCollectionViewCell: UICollectionViewCell, ReusableView {
-
+  
   var disposeBag = DisposeBag()
   
   private(set) var didSetupConstraints = false
   
   // MARK: Initializing
-
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     self.initialize()
     self.updateConstraintsIfNeeded()
   }
-
+  
   required convenience init?(coder aDecoder: NSCoder) {
     self.init(frame: .zero)
     
@@ -34,18 +34,18 @@ class BaseCollectionViewCell: UICollectionViewCell, ReusableView {
   }
   
   override func updateConstraints() {
-      if !self.didSetupConstraints {
-          self.setupConstraints()
-          self.didSetupConstraints = true
-      }
-      super.updateConstraints()
+    if !self.didSetupConstraints {
+      self.setupConstraints()
+      self.didSetupConstraints = true
+    }
+    super.updateConstraints()
   }
   
   func initialize() {
-      // Override point
+    // Override point
   }
-
+  
   func setupConstraints() {
-      // Override point
+    // Override point
   }
 }

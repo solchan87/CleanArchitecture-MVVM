@@ -17,6 +17,11 @@
 		E2536DEE277CA1280020156D /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = E2536DED277CA1280020156D /* RxGesture */; };
 		E2536DF1277CA13E0020156D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = E2536DF0277CA13E0020156D /* Moya */; };
 		E2536DF3277CA13E0020156D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = E2536DF2277CA13E0020156D /* RxMoya */; };
+		E2536DF6277CA36A0020156D /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = E2536DF5277CA36A0020156D /* Nimble */; };
+		E2536DF9277CA3A40020156D /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = E2536DF8277CA3A40020156D /* Quick */; };
+		E2536DFC277CAA390020156D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E2536DFB277CAA390020156D /* SnapKit */; };
+		E2536E01277DFA150020156D /* EncyclopediaItemTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2536E00277DFA150020156D /* EncyclopediaItemTCell.swift */; };
+		E2536E04277DFF5D0020156D /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2536E03277DFF5D0020156D /* ColorSet.swift */; };
 		E29F2B4D2770565900F17A13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2B4C2770565900F17A13 /* AppDelegate.swift */; };
 		E29F2B4F2770565900F17A13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2B4E2770565900F17A13 /* SceneDelegate.swift */; };
 		E29F2B512770565900F17A13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2B502770565900F17A13 /* ViewController.swift */; };
@@ -79,6 +84,8 @@
 /* Begin PBXFileReference section */
 		E2536DB1277C8BAC0020156D /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		E2536DB3277C8C110020156D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		E2536E00277DFA150020156D /* EncyclopediaItemTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaItemTCell.swift; sourceTree = "<group>"; };
+		E2536E03277DFF5D0020156D /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		E29F2B492770565900F17A13 /* CleanMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29F2B4C2770565900F17A13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E29F2B4E2770565900F17A13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +141,7 @@
 				E2536DF3277CA13E0020156D /* RxMoya in Frameworks */,
 				E29F2BA32771992F00F17A13 /* CocoaLumberjackSwift in Frameworks */,
 				E2536DEE277CA1280020156D /* RxGesture in Frameworks */,
+				E2536DFC277CAA390020156D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +149,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2536DF6277CA36A0020156D /* Nimble in Frameworks */,
 				E2536DEB277CA1110020156D /* RxTest in Frameworks */,
+				E2536DF9277CA3A40020156D /* Quick in Frameworks */,
 				E2536DE3277CA1110020156D /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +172,38 @@
 				E2536DB1277C8BAC0020156D /* RootNavigationController.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		E2536DFD277DF9CE0020156D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3D708277767C30032AEB3 /* EncyclopediaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E2536DFE277DF9D70020156D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3D70A277767F70032AEB3 /* EncyclopediaViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E2536DFF277DF9DF0020156D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2536E00277DFA150020156D /* EncyclopediaItemTCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2536E02277DFF3D0020156D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E2536E03277DFF5D0020156D /* ColorSet.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		E29F2B402770565900F17A13 = {
@@ -248,6 +290,7 @@
 		E29F2B9127706B4000F17A13 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				E2536E02277DFF3D0020156D /* Util */,
 				E29F2BA42771994900F17A13 /* Log */,
 				E29F2B9C2771911000F17A13 /* Extension */,
 				E29F2B4E2770565900F17A13 /* SceneDelegate.swift */,
@@ -397,8 +440,9 @@
 		E2E3D707277767990032AEB3 /* Encyclopedia */ = {
 			isa = PBXGroup;
 			children = (
-				E2E3D708277767C30032AEB3 /* EncyclopediaViewModel.swift */,
-				E2E3D70A277767F70032AEB3 /* EncyclopediaViewController.swift */,
+				E2536DFF277DF9DF0020156D /* View */,
+				E2536DFD277DF9CE0020156D /* ViewModel */,
+				E2536DFE277DF9D70020156D /* ViewController */,
 			);
 			path = Encyclopedia;
 			sourceTree = "<group>";
@@ -477,6 +521,7 @@
 				E2536DED277CA1280020156D /* RxGesture */,
 				E2536DF0277CA13E0020156D /* Moya */,
 				E2536DF2277CA13E0020156D /* RxMoya */,
+				E2536DFB277CAA390020156D /* SnapKit */,
 			);
 			productName = CleanMVVM;
 			productReference = E29F2B492770565900F17A13 /* CleanMVVM.app */;
@@ -499,6 +544,8 @@
 			packageProductDependencies = (
 				E2536DE2277CA1110020156D /* RxBlocking */,
 				E2536DEA277CA1110020156D /* RxTest */,
+				E2536DF5277CA36A0020156D /* Nimble */,
+				E2536DF8277CA3A40020156D /* Quick */,
 			);
 			productName = CleanMVVMTests;
 			productReference = E29F2B622770565B00F17A13 /* CleanMVVMTests.xctest */;
@@ -561,6 +608,9 @@
 				E2536DE1277CA1110020156D /* XCRemoteSwiftPackageReference "RxSwift" */,
 				E2536DEC277CA1280020156D /* XCRemoteSwiftPackageReference "RxGesture" */,
 				E2536DEF277CA13E0020156D /* XCRemoteSwiftPackageReference "Moya" */,
+				E2536DF4277CA36A0020156D /* XCRemoteSwiftPackageReference "Nimble" */,
+				E2536DF7277CA3A40020156D /* XCRemoteSwiftPackageReference "Quick" */,
+				E2536DFA277CAA390020156D /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = E29F2B4A2770565900F17A13 /* Products */;
 			projectDirPath = "";
@@ -617,6 +667,7 @@
 				E29F2B9B277190CC00F17A13 /* Networking.swift in Sources */,
 				E2E3D728277ADB8E0032AEB3 /* JSONData.swift in Sources */,
 				E2536DB2277C8BAC0020156D /* RootNavigationController.swift in Sources */,
+				E2536E01277DFA150020156D /* EncyclopediaItemTCell.swift in Sources */,
 				E2E3D6E827720B040032AEB3 /* Rx+ViewController.swift in Sources */,
 				E2E3D6FC277363040032AEB3 /* BaseTableViewCell.swift in Sources */,
 				E2E3D6F62773629F0032AEB3 /* BaseViewController.swift in Sources */,
@@ -625,6 +676,7 @@
 				E2E3D704277608CC0032AEB3 /* PokemonAPI.swift in Sources */,
 				E29F2BB927719DC000F17A13 /* BaseService.swift in Sources */,
 				E29F2BA9277199AA00F17A13 /* ViewModelType.swift in Sources */,
+				E2536E04277DFF5D0020156D /* ColorSet.swift in Sources */,
 				E29F2BAC277199DF00F17A13 /* CoordinatorType.swift in Sources */,
 				E2E3D70D27793DCB0032AEB3 /* PokemonService.swift in Sources */,
 				E2E3D70627760E860032AEB3 /* PokemonList.swift in Sources */,
@@ -999,6 +1051,30 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		E2536DF4277CA36A0020156D /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		E2536DF7277CA3A40020156D /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		E2536DFA277CAA390020156D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		E29F2B87277056EC00F17A13 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -1065,6 +1141,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E2536DEF277CA13E0020156D /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		E2536DF5277CA36A0020156D /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2536DF4277CA36A0020156D /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		E2536DF8277CA3A40020156D /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2536DF7277CA3A40020156D /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		E2536DFB277CAA390020156D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2536DFA277CAA390020156D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		E29F2BA02771992F00F17A13 /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -13,6 +13,12 @@ import RxCocoa
 final class EncyclopediaViewController: BaseViewController, BindableType {
   
   // MARK: UI
+  let tableView: UITableView = .init(
+    frame: .zero,
+    style: .plain
+  ).then {
+    $0.register(EncyclopediaItemTCell.self)
+  }
   
   // MARK: Properties
   var viewModel: EncyclopediaViewModel
@@ -28,7 +34,13 @@ final class EncyclopediaViewController: BaseViewController, BindableType {
   }
   
   override func setupView() {
-    
+    self.view.addSubview(self.tableView)
+  }
+  
+  override func setupConstraints() {
+    self.tableView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
+    }
   }
   
   func bind() {
