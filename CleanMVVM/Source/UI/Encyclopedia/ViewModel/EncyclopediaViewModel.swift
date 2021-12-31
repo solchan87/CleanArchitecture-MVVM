@@ -16,11 +16,11 @@ final class EncyclopediaViewModel: ViewModelType {
   }
   
   struct Input {
-    
+    let getEncyclopediaList: PublishSubject<Void> = .init()
   }
   
   struct Output {
-    
+    let encyclopediaList: BehaviorRelay<PokemonList>
   }
   
   private let disposeBag: DisposeBag = .init()
@@ -28,6 +28,9 @@ final class EncyclopediaViewModel: ViewModelType {
   private let dependency: Dependency
   private let provider: ServicesProviderType
   private let coordinator: CoordinatorType
+  
+  let currentOffset: Int = 0
+  let limit: Int = 20
   
   init(
     dependency: Dependency,
@@ -40,7 +43,18 @@ final class EncyclopediaViewModel: ViewModelType {
   }
   
   func transform(input: Input) -> Output {
+    let encyclopediaList: BehaviorRelay<PokemonList>
     
-    return Output()
+//    encyclopediaList = input.getEncyclopediaList.asObservable()
+//      .flatMap { [weak self] _ -> Driver<PokemonList> in
+//        guard let self = self else { return .empty() }
+//        self.provider.pokemonService.getPokemonList(
+//          offset: self.currentOffset,
+//          limit: self.limit
+//        )
+//        .asDriver(onErrorDriveWith: .empty())
+//      }
+    
+    return Output(encyclopediaList: encyclopediaList)
   }
 }
