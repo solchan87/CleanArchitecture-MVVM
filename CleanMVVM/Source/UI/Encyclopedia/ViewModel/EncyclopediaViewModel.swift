@@ -16,11 +16,12 @@ final class EncyclopediaViewModel: ViewModelType {
   }
   
   struct Input {
-    let getEncyclopediaList: PublishSubject<Void> = .init()
+    let getPokemonList: PublishSubject<Void> = .init()
+    let loadMore: PublishSubject<Void> = .init()
   }
   
   struct Output {
-    let encyclopediaList: BehaviorRelay<PokemonList>
+    let pokemonList: Driver<[ListedPokemon]>
   }
   
   private let disposeBag: DisposeBag = .init()
@@ -29,8 +30,10 @@ final class EncyclopediaViewModel: ViewModelType {
   private let provider: ServicesProviderType
   private let coordinator: CoordinatorType
   
-  let currentOffset: Int = 0
-  let limit: Int = 20
+  private let limit: Int = 20
+  private var isLoading: Bool = false
+  
+  private var pokemons: [ListedPokemon] = .init()
   
   init(
     dependency: Dependency,
@@ -43,18 +46,23 @@ final class EncyclopediaViewModel: ViewModelType {
   }
   
   func transform(input: Input) -> Output {
-    let encyclopediaList: BehaviorRelay<PokemonList>
     
-//    encyclopediaList = input.getEncyclopediaList.asObservable()
-//      .flatMap { [weak self] _ -> Driver<PokemonList> in
-//        guard let self = self else { return .empty() }
-//        self.provider.pokemonService.getPokemonList(
-//          offset: self.currentOffset,
-//          limit: self.limit
-//        )
-//        .asDriver(onErrorDriveWith: .empty())
-//      }
+    let pokemonList = input.getPokemonList
+      .flatMap { [weak self] _ -> Observable<[ListedPokemon]> in
+        guard let self = self else { return .empty() }
+        return self.provider.pokemonService
+          .getPokemonList(
+            offset: 0,
+            limit: self.limit
+          )
+          .asObservable()
+          .map { [unowned self] loadedPokemons -> [ListedPokemon] in
+            self.pokemons.append(contentsOf: loadedPokemons.results)
+            return self.pokemons
+          }
+      }
+      .asDriver(onErrorDriveWith: .empty())
     
-    return Output(encyclopediaList: encyclopediaList)
+    return Output(pokemonList: pokemonList)
   }
 }
