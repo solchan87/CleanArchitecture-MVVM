@@ -44,6 +44,14 @@ final class EncyclopediaViewController: BaseViewController, BindableType {
   }
   
   func bind() {
+    let getPokemonList: PublishSubject<Void> = .init()
+    let loadMore: PublishSubject<Void> = .init()
     
+    let output = self.viewModel.transform(
+      input: .init(
+        getPokemonList: getPokemonList,
+        loadMore: loadMore
+      )
+    )
   }
 }

@@ -16,12 +16,12 @@ final class EncyclopediaViewModel: ViewModelType {
   }
   
   struct Input {
-    let getPokemonList: PublishSubject<Void> = .init()
-    let loadMore: PublishSubject<Void> = .init()
+    let getPokemonList: PublishSubject<Void>
+    let loadMore: PublishSubject<Void>
   }
   
   struct Output {
-    let pokemonList: Driver<[ListedPokemon]>
+    let pokemonList: BehaviorRelay<[ListedPokemon]>
   }
   
   private let disposeBag: DisposeBag = .init()
@@ -32,8 +32,6 @@ final class EncyclopediaViewModel: ViewModelType {
   
   private let limit: Int = 20
   private var isLoading: Bool = false
-  
-  private var pokemons: [ListedPokemon] = .init()
   
   init(
     dependency: Dependency,
@@ -47,7 +45,9 @@ final class EncyclopediaViewModel: ViewModelType {
   
   func transform(input: Input) -> Output {
     
-    let pokemonList = input.getPokemonList
+    let pokemonList: BehaviorRelay<[ListedPokemon]> = .init(value: [])
+    
+    input.getPokemonList
       .flatMap { [weak self] _ -> Observable<[ListedPokemon]> in
         guard let self = self else { return .empty() }
         return self.provider.pokemonService
@@ -56,12 +56,26 @@ final class EncyclopediaViewModel: ViewModelType {
             limit: self.limit
           )
           .asObservable()
-          .map { [unowned self] loadedPokemons -> [ListedPokemon] in
-            self.pokemons.append(contentsOf: loadedPokemons.results)
-            return self.pokemons
-          }
+          .map { $0.results }
       }
       .asDriver(onErrorDriveWith: .empty())
+      .drive(pokemonList)
+      .disposed(by: self.disposeBag)
+    
+    input.loadMore
+      .flatMap { [weak self] _ -> Observable<[ListedPokemon]> in
+        guard let self = self else { return .empty() }
+        return self.provider.pokemonService
+          .getPokemonList(
+            offset: pokemonList.value.count,
+            limit: self.limit
+          )
+          .asObservable()
+          .map { pokemonList.value + $0.results }
+      }
+      .asDriver(onErrorDriveWith: .empty())
+      .drive(pokemonList)
+      .disposed(by: self.disposeBag)
     
     return Output(pokemonList: pokemonList)
   }
