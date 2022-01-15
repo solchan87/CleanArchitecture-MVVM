@@ -1,21 +1,22 @@
-////
-////  MockNetworking.swift
-////  CleanMVVMTests
-////
-////  Created by Tom on 2021/12/27.
-////
 //
+//  NetworkingStub.swift
+//  CleanMVVMTests
+//
+//  Created by Tom on 2022/01/15.
+//
+
 import Foundation
+
 import RxSwift
 import Moya
 
 @testable import CleanMVVM
 
-final class MockNetworking: MoyaProvider<MultiTarget>,
+final class NetworkingStub: MoyaProvider<MultiTarget>,
                             NetworkingProtocol {
   
   enum TestType {
-    case stub(statusCode: Int, mockedData: Data)
+    case stub(statusCode: Int)
     case online
   }
   
@@ -24,13 +25,13 @@ final class MockNetworking: MoyaProvider<MultiTarget>,
     plugins: [PluginType]
   ) {
     switch testType {
-    case let .stub(statusCode, mockedData):
+    case let .stub(statusCode):
       super.init(
         endpointClosure: { target in
           return Endpoint(
             url: URL(target: target).absoluteString,
             sampleResponseClosure: {
-              .networkResponse(statusCode , mockedData)
+              .networkResponse(statusCode , target.sampleData)
             },
             method: target.method,
             task: target.task,
@@ -54,5 +55,6 @@ final class MockNetworking: MoyaProvider<MultiTarget>,
                line: UInt)
   -> Single<Response> {
     return self.rx.request(target)
+      .filterSuccessfulStatusCodes()
   }
 }
