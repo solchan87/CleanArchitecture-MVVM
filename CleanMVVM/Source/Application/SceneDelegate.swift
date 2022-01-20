@@ -12,7 +12,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
   var coordinator: AppCoordinator?
   
-  let provider: ServicesProviderType = ServicesProvider()
+  private let provider: ServicesProvider = .init(
+    networking: Networking(),
+    coreDataStack: CoreDataStack()
+  )
   
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = (scene as? UIWindowScene) else { return }

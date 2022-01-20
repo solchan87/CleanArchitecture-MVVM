@@ -13,9 +13,9 @@ protocol PokemonServiceType: AnyObject {
 
 class PokemonService: BaseService, PokemonServiceType {
   
-  private let networking: Networking
+  private let networking: NetworkingProtocol
   
-  init(provider: ServicesProviderType, networking: Networking) {
+  init(provider: ServicesProviderType, networking: NetworkingProtocol) {
     self.networking = networking
     super.init(provider: provider)
   }

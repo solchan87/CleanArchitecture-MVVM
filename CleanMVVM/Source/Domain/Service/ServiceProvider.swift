@@ -12,8 +12,19 @@ protocol ServicesProviderType: AnyObject {
 }
 
 final class ServicesProvider: ServicesProviderType {
+  let networking: NetworkingProtocol
+  let coreDataStack: CoreDataStack
+  
+  init(
+    networking: NetworkingProtocol,
+    coreDataStack: CoreDataStack
+  ) {
+    self.networking = networking
+    self.coreDataStack = coreDataStack
+  }
+  
   lazy var pokemonService: PokemonServiceType = PokemonService(
     provider: self,
-    networking: .init()
+    networking: self.networking
   )
 }
